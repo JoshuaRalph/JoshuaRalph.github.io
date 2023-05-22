@@ -1,0 +1,237 @@
+.cart-icon {
+    color: white;
+    font-size: 25px;
+}
+
+.product-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15rem);
+    column-gap: 20px;
+    row-gap: 50px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: center;
+}
+
+.product-card {
+    position: relative;
+}
+
+.prod-img-wrap {
+    height: 100%;
+    width: 100%;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod-img-wrap img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.prod-price {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 8px 8px 8px 14px;
+    border-bottom-left-radius: 25px;
+}
+
+.buy {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-top: 90%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.buy a {
+    color: rgb(4, 33, 49);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.buy:hover {
+    opacity: 1;
+}
+
+.prod-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-style: solid;
+    border: 0px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.prod-content p {
+    color: rgb(4, 33, 49);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.scrolltop {
+    bottom: -80px;
+    right: 50px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* seperated nav */
+nav {
+    position: fixed;
+    top: 0;
+    background-color: rgb(4, 33, 49);
+    height: 130px;
+    width: 100%;
+    margin-bottom: 50px;
+    z-index: 100;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 25px;
+    border-color: rgb(44, 57, 63);
+}
+
+.logo {
+    height: 5.5rem;
+    padding: 0 100px;
+    padding-top: 10px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 8px 14px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    border-radius: 4px;
+    color: rgb(75, 243, 255);
+    transition: 0.2s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 90px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    .logo {
+        height: 4.5rem;
+        padding: 0 70px;
+        padding-top: 10px;
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    .logo {
+        height: 3.5rem;
+        padding: 0 40px;
+        padding-top: 10px;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #334c7a;
+        top: 110px;
+        left: -100%;
+        text-align: center;
+        transition: all .3s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #ffad16;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
